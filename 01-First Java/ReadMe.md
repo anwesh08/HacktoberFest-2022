@@ -1,5 +1,4 @@
 <h1>Basic Java Programs</h1>
-<hr>
 <p style="color:black; font-size: 15px">1. Take in two numbers and an operator (+, -, *, /) and calculate the value. (Use if conditions)</p>
 <p style="color:black; font-size: 15px">2. Input currency in rupees and output in USD.</p>
 <p style="color:black; font-size: 15px">3. Write a program to print whether a number is even or odd, also take input.</p>

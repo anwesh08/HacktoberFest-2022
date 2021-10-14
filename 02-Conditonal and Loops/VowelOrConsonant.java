@@ -15,6 +15,9 @@ public class VowelOrConsonant {
             else
                 System.out.print("Alphabet is Consonant");
         }
+	else {
+		System.out.println("Not a Alphabet");
+	} 
         in.close();
     }
 }

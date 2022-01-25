@@ -1,20 +1,13 @@
 class Solution {
     public boolean searchMatrix(int[][] matrix, int target) {
-        for (int[] mat : matrix) {
-            int low = 0, high = mat.length - 1;
-            if (mat[low] <= target && mat[high] >= target) {
-                return binsearch(mat, target);
-            }
-        }
-        return false;
-    }
-    boolean binsearch(int[] mat, int target) {
-        int low = 0, high = mat.length - 1;
-        while (low <= high) {
-            int mid = (low + high)/2;
-            if (target == mat[mid]) return true;
-            else if (target < mat[mid]) high = mid - 1;
-            else low = mid + 1;
+        int r = 0, c = matrix[0].length - 1;
+        while((r < matrix.length) && c >= 0) {
+            if (matrix[r][c] == target)
+                return true;
+            if(matrix[r][c] < target)
+                r++;
+            else
+                c--;
         }
         return false;
     }

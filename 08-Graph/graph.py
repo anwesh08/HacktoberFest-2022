@@ -6,10 +6,10 @@ class Graph:
   def __init__(self, N):
     """N is the vertex quantity that'll be added to the graph"""
 
-    self.__adjacencyList = defaultdict(dict)
+    self.adjacencyList = defaultdict(dict)
 
     for i in range (0, N):
-      self.__adjacencyList[i] = {}
+      self.adjacencyList[i] = {}
 
 
   def addEdge(self, u, v, w = 1):
@@ -20,14 +20,14 @@ class Graph:
       return (unsuccessfully): if U and V are non-existent vertices in the graph, a message will be returned. \n
     """
 
-    if u not in self.__adjacencyList.keys():
+    if u not in self.adjacencyList.keys():
       return "vertex" + str(u) + "doesn't exists"
 
-    if v not in self.__adjacencyList.keys():
+    if v not in self.adjacencyList.keys():
       return "vertex " + str(v) + " doesn't exists"
 
     else:
-      self.__adjacencyList[u].update({v: w})
+      self.adjacencyList[u].update({v: w})
 
 
   def getInDegree(self, v):
@@ -39,8 +39,8 @@ class Graph:
 
     inDegree = 0
 
-    for vertex in self.__adjacencyList.keys():
-      if v in self.__adjacencyList[vertex].keys():
+    for vertex in self.adjacencyList.keys():
+      if v in self.adjacencyList[vertex].keys():
         inDegree += 1
 
     return inDegree
@@ -53,7 +53,7 @@ class Graph:
       output: the out-degree of a vertex.\n
     """
 
-    return len(self.__adjacencyList[v])
+    return len(self.adjacencyList[v])
 
 
   def getDegree(self, v):
@@ -64,4 +64,3 @@ class Graph:
     """
 
     return self.getOutDegree(v) + self.getInDegree(v)
-    

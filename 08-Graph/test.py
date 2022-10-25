@@ -1,3 +1,4 @@
+from dijkstra import dijkstra
 from graph import Graph
 from bfs import bfs
 from dfs import dfs
@@ -13,3 +14,5 @@ graph.addEdge(3, 3)
 
 bfs(graph.adjacencyList, 2)
 dfs(graph.adjacencyList, 2)
+print()
+print(dijkstra(graph.adjacencyList, 1))

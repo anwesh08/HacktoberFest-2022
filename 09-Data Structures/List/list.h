@@ -9,15 +9,10 @@
 
 typedef int TypeElem;
 
-/**************************************
- * DADOS
- **************************************/
 typedef struct list List;
 typedef struct node Node;
 
-/**************************************
- * PROTÓTIPOS
- **************************************/
+
 List *list_create();
 void list_destory(List **adress);
 

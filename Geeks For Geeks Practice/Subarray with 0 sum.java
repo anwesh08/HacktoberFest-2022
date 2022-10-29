@@ -11,7 +11,6 @@ class Solution{
                return true;
            }
            total.add(sum);
-           
        }
        return false;
     }
